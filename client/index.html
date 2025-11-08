@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Drawing Canvas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="toolbar">
+            <div class="tool-group">
+                <button id="tool-pen" class="tool-btn active" data-tool="pen" title="Pen">
+                    <i class="fas fa-pen"></i>
+                </button>
+                <button id="tool-eraser" class="tool-btn" data-tool="eraser" title="Eraser">
+                    <i class="fas fa-eraser"></i>
+                </button>
+            </div>
+            <div class="tool-group">
+                <label>Color:</label>
+                <input type="color" id="color-picker" value="#000000">
+            </div>
+            <div class="tool-group">
+                <label>Size:</label>
+                <input type="range" id="size-slider" min="1" max="50" value="5">
+                <span id="size-value">5</span>
+            </div>
+            <div class="tool-group">
+                <button id="undo-btn" class="action-btn" title="Undo">
+                    <i class="fas fa-undo"></i>
+                </button>
+                <button id="redo-btn" class="action-btn" title="Redo">
+                    <i class="fas fa-redo"></i>
+                </button>
+                <button id="clear-btn" class="action-btn clear" title="Clear Canvas">Clear</button>
+            </div>
+            <div class="status-bar">
+                <div class="status-item">
+                    <span id="connection-status" class="disconnected">Connecting...</span>
+                </div>
+                <div class="status-item">
+                    <span id="coordinates">X: 0, Y: 0</span>
+                </div>
+            </div>
+        </div>
+        <div class="canvas-container">
+            <canvas id="drawing-canvas"></canvas>
+            <div id="cursors"></div>
+        </div>
+        <div class="users-panel">
+            <h3>Online Users</h3>
+            <div id="users-list"></div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="canvas.js"></script>
+    <script src="websocket.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
