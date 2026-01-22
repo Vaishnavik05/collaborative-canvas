@@ -1,6 +1,6 @@
 class WebSocketClient {
   constructor() {
-    this.socket = io();
+    this.socket = io('https://collab-canvas-ufyr.onrender.com/');
     this.userId = null;
     this.userColor = null;
     this.setupSocketListeners();
