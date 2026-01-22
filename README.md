@@ -130,13 +130,13 @@ collaborative-canvas/
 - Socket.IO Client
 - Font Awesome Icons
 - CSS3 (Flexbox, Grid)
-
+Deploy link: https://clever-cuchufli-e149a3.netlify.app/
 ### Backend:
 - Node.js
 - Express.js
 - Socket.IO Server
 - In-memory data storage
-
+Deploy link: https://collab-canvas-ufyr.onrender.com/
 ## Author
 
 Built as a collaborative drawing application project.
